@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Управление проигрыванием медиа</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Стили для контейнера кнопок */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Стили для кнопок */
+        button {
+            margin: 10px;
+            padding: 20px;
+            height: 100px; /* Фиксированная высота кнопок */
+            width: 100px;
+            font-size: 60px;
+            line-height: 1;
+            border: none;
+            border-radius: 50%;
+            background-color: #ccc;
+            color: #000;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #aaa;
+                color: #fff;
+            }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <form action="api/values" method="post">
+            <button type="submit" name="button" value="previous-track" aria-label="Предыдущий трек"><span style="font-size: 48px">&#60;</span></button>
+            <button type="submit" name="button" value="pause" aria-label="Пауза"><span style="font-size: 48px">||</span></button>
+            <button type="submit" name="button" value="next-track" aria-label="Следующий трек"><span style="font-size: 48px">&#62;</span></button>
+        </form>
+    </div>
+</body>
+</html>
